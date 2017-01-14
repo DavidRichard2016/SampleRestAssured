@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "rating": {
+      "type": "object",
+      "properties": {
+        "max": {
+          "type": "integer"
+        },
+        "numRaters": {
+          "type": "integer"
+        },
+        "average": {
+          "type": "string"
+        },
+        "min": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "max",
+        "numRaters",
+        "average",
+        "min"
+      ]
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "author": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pubdate": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "count",
+          "name",
+          "title"
+        ]
+      }
+    },
+    "origin_title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "binding": {
+      "type": "string"
+    },
+    "translator": {
+      "type": "array",
+      "items": {}
+    },
+    "catalog": {
+      "type": "string"
+    },
+    "pages": {
+      "type": "string"
+    },
+    "images": {
+      "type": "object",
+      "properties": {
+        "small": {
+          "type": "string"
+        },
+        "large": {
+          "type": "string"
+        },
+        "medium": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "small",
+        "large",
+        "medium"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "isbn10": {
+      "type": "string"
+    },
+    "isbn13": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "alt_title": {
+      "type": "string"
+    },
+    "author_intro": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "rating",
+    "subtitle",
+    "author",
+    "pubdate",
+    "tags",
+    "origin_title",
+    "image",
+    "binding",
+    "translator",
+    "catalog",
+    "pages",
+    "images",
+    "alt",
+    "id",
+    "publisher",
+    "isbn10",
+    "isbn13",
+    "title",
+    "url",
+    "alt_title",
+    "author_intro",
+    "summary",
+    "price"
+  ]
+}
