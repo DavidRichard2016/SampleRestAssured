@@ -18,13 +18,14 @@ import org.junit.Test;
 
 
 
-public class TestDouban {
+public class DoubanTest {
     private String bookId = "/26933142";
+    private String baseURI = "https://api.douban.com/v2/book";
 
     @Before
     public void setUp() throws Exception {
 //		set the url and port number
-        RestAssured.baseURI = "https://api.douban.com/v2/book"; // set the douban as the default host
+        RestAssured.baseURI = baseURI; // set the douban as the default host
 //      RestAssured.port = 80;
         String newUri = RestAssured.baseURI ;
         System.out.println(newUri);
@@ -105,13 +106,27 @@ public class TestDouban {
     public void testResponseTimeLess200() {
         when().
                 get(bookId).
-                then().
+        then().
                 time(lessThan(2000L)); // Milliseconds
     }
 
-//    @Test
-//    public void testBody(){
+    /****
+     * this test would use syntactic sugar given / when /then
+     */
+
+    @Test
+    public void testGetBookInfo(){
+        final String specialId = "26933142";
 //        fail("Not yet implemented");
-//    }
+        given().
+                pathParam("bookId",specialId).
+        when().
+                get("/{bookId}").
+        then().
+                statusCode(200).
+                body("id",equalTo(specialId)).  // get the response  id with  using json path
+                body("price",equalTo("35.00"));
+
+    }
 
 }

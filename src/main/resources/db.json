@@ -1,0 +1,37 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "david",
+      "price": "35.00"
+    },
+    {
+      "id": 2,
+      "title": "How to do QA job during your first project",
+      "author": "jane",
+      "price": "24.00"
+    },
+    {
+      "id": 3,
+      "title": "Could you get back your mnoney?",
+      "author": "wilson",
+      "price": "49.00"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "that is awesome",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "so terrible",
+      "postId": 2
+    }
+  ],
+  "profile": {
+    "name": "david"
+  }
+}
